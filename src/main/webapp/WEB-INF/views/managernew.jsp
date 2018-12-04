@@ -170,6 +170,7 @@
         <ul class="am-nav am-nav-pills am-topbar-nav admin-header-list">
 
             <li class="kuanjie">
+
                 <%--
                                 <a href="http://localhost:8080/zuoyeguanli/user/managerMess.do?username=<%=request.getAttribute("username")%>">个人中心</a>
                 --%>
