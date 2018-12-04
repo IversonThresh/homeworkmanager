@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="zuoyeguanli:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="zuoyeguanli_war.war">
+      <element id="artifact" artifact-name="zuoyeguanli:war exploded" />
+    </root>
+  </artifact>
+</component>

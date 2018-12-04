@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://F:/javaproject/vjtools-master/standard/sonar-vj/sonar-vj.iml" filepath="F:/javaproject/vjtools-master/standard/sonar-vj/sonar-vj.iml" />
+      <module fileurl="file://F:/javaproject/vjtools-master/vjkit/vjkit.iml" filepath="F:/javaproject/vjtools-master/vjkit/vjkit.iml" />
+      <module fileurl="file://F:/javaproject/vjtools-master/vjmap/vjmap.iml" filepath="F:/javaproject/vjtools-master/vjmap/vjmap.iml" />
+      <module fileurl="file://F:/javaproject/vjtools-master/vjmxcli/vjmxcli.iml" filepath="F:/javaproject/vjtools-master/vjmxcli/vjmxcli.iml" />
+      <module fileurl="file://F:/javaproject/vjtools-master/vjstar/vjstar.iml" filepath="F:/javaproject/vjtools-master/vjstar/vjstar.iml" />
+      <module fileurl="file://F:/javaproject/vjtools-master/vjtools.iml" filepath="F:/javaproject/vjtools-master/vjtools.iml" />
+      <module fileurl="file://F:/javaproject/vjtools-master/vjtop/vjtop.iml" filepath="F:/javaproject/vjtools-master/vjtop/vjtop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuoyeguanli.iml" filepath="$PROJECT_DIR$/zuoyeguanli.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 设置为IAnnounceDao接口方法提供sql语句配置 -->
+<mapper namespace="com.hejin.dao.IAnnounceDao">
+    <insert id="publishAnnounce">
+        INSERT INTO announce(announceid,announcename,content,publishtime,username,role)
+        VALUES(#{announceid},#{announcename},#{content},#{publishtime},#{username},#{role});
+    </insert>
+
+    <insert id="teacherPublishTask">
+        INSERT INTO announce(announceid,announcename,content,role,username,publishtime)
+        VALUES(#{announceid},#{announcename},#{content},#{role},#{username},#{publishtime});
+    </insert>
+
+    <select id="selectAllAnnounce" resultType="com.hejin.model.Announce">
+        SELECT * FROM announce;
+    </select>
+
+    <select id="selectAnnounceById" resultType="com.hejin.model.Announce">
+        SELECT * FROM announce WHERE announceid = #{announceid};
+    </select>
+</mapper>

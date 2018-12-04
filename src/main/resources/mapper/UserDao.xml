@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 设置为IUserDao接口方法提供sql语句配置 -->
+<mapper namespace="com.hejin.dao.IUserDao">
+    <!--manager-->
+    <select id="selectUser" resultType="com.hejin.model.User" parameterType="long">
+        SELECT * FROM user WHERE id = #{id}
+    </select>
+
+    <select id="selectUserByName" resultType="User" parameterType="String">
+        SELECT * FROM  user WHERE  username = #{username}
+    </select>
+
+    <select id="selectAllUser" resultType="com.hejin.model.User">
+        SELECT * FROM user;
+    </select>
+
+    <update id="updatePersonMess">
+        UPDATE USER SET username = #{username},password = #{password},
+                          email = #{email}
+                          WHERE id = #{id};
+    </update>
+
+    <!--teacher-->
+    <insert id="addTeacher">
+        INSERT INTO teacher(tid,tno,teachername,password,phone)
+                VALUES (#{tid},#{tno},#{teachername},#{password},#{phone});
+    </insert>
+
+    <select id="selectTotalRow" resultType="int">
+        SELECT COUNT(1) FROM teacher;
+    </select>
+
+    <select id="selectAllTeacher" resultType="com.hejin.model.Teacher">
+        SELECT * FROM teacher;
+    </select>
+
+    <delete id="deleteTeacher">
+        DELETE FROM teacher WHERE tid = #{tid};
+    </delete>
+
+    <select id="selectByTid" resultType="com.hejin.model.Teacher">
+        SELECT * FROM teacher WHERE tid = #{tid};
+    </select>
+
+    <update id="updateTeacher">
+        UPDATE teacher SET teachername = #{teachername},password = #{password},
+                          phone = #{phone},tno=#{tno}
+                          WHERE tid = #{tid};
+    </update>
+
+    <select id="selectTeacherByName" resultType="com.hejin.model.Teacher">
+        SELECT * FROM teacher WHERE teachername = #{teachername};
+    </select>
+
+    <!--student-->
+    <insert id="addStudent">
+        INSERT INTO student(studentid,sno,stuname,password,smajor,sgrade,sclass)
+                VALUES (#{sid},#{sno},#{studentname},#{password},#{smajor},#{sgrade},#{sclass});
+    </insert>
+
+    <select id="selectAllStudent" resultType="com.hejin.model.Student">
+        SELECT * FROM  student;
+    </select>
+
+    <delete id="deleteStudent">
+        DELETE FROM student WHERE studentid = #{sid};
+    </delete>
+
+    <select id="selectStudentById" resultType="com.hejin.model.Student">
+        SELECT * FROM  student WHERE studentid = #{sid};
+    </select>
+
+    <update id="updateStudent">
+        UPDATE student SET stuname = #{studentname},password = #{password},
+        sno = #{sno},smajor=#{smajor},sgrade=#{sgrade},sclass=#{sclass}
+        WHERE studentid = #{sid};
+    </update>
+
+    <select id="selectStudentByName" resultType="com.hejin.model.Student">
+        SELECT * FROM student WHERE stuname = #{studentname};
+    </select>
+
+    <select id="selectAllHomework" resultType="com.hejin.model.CnameHomework">
+        SELECT sc.cname,announce.announcename,announce.content FROM sc
+            LEFT JOIN course ON sc.cname = course.coursename
+            LEFT JOIN teacher ON course.tno = teacher.tno
+            LEFT JOIN announce ON teacher.teachername = announce.username
+            WHERE sc.stuname = #{studentname};
+    </select>
+
+    <select id="checkGoal" resultType="com.hejin.model.Task">
+        SELECT * FROM task
+        WHERE studentname = #{studentname};
+    </select>
+</mapper>

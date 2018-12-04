@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hejin.dao.ITaskDao">
+    <insert id="insertTask">
+        INSERT INTO task(taskid, taskname, teachername, taskurl,studentname,uploadtime)
+        VALUES(#{taskid},#{taskname},#{teachername},#{taskurl},#{studentname},#{res});
+    </insert>
+
+    <select id="selectAllFile" resultType="com.hejin.model.Task">
+        SELECT * FROM task WHERE teachername = #{teachername};
+    </select>
+
+    <select id="selectTaskById" resultType="com.hejin.model.Task">
+        SELECT * FROM task WHERE taskid = #{taskid};
+    </select>
+
+    <update id="updateScore">
+        UPDATE task SET goal = #{goal},evaluation = #{evaluation} WHERE taskid = #{taskid};
+    </update>
+</mapper>

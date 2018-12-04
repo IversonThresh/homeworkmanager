@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sonar-vj" />
+        <module name="vjkit" />
+        <module name="vjmap" />
+        <module name="vjmxcli" />
+        <module name="vjstar" />
+        <module name="vjtop" />
+        <module name="zuoyeguanli" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sonar-vj" target="1.8" />
+      <module name="vjkit" target="1.7" />
+      <module name="vjmap" target="1.7" />
+      <module name="vjmxcli" target="1.7" />
+      <module name="vjstar" target="1.7" />
+      <module name="vjtools" target="1.5" />
+      <module name="vjtop" target="1.7" />
+      <module name="zuoyeguanli" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
